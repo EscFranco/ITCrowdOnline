@@ -64,7 +64,7 @@ app.delete('/productos/:id', async function (req, res) {
 
 // -----------------  SERVER  --------------------- //
 
-const PORT = process.env.port || 5000
+const PORT = process.env.PORT || 5000
 const server = app.listen(PORT, () => {
     console.log(`Servidor http escuchando en el puerto ${server.address().port}`)
 })
