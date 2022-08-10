@@ -1,4 +1,4 @@
-import path from 'path'
+const path = require('path')
 
 const sqlLITE3 = {
     table : 'productos',
@@ -11,4 +11,4 @@ const sqlLITE3 = {
     }
 }
 
-export default sqlLITE3;
+module.exports = { sqlLITE3 };

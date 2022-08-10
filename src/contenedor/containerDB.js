@@ -1,4 +1,4 @@
-import knex from 'knex'
+const knex = require('knex')
 
 // --------------- CONTAINER --------------- //
 
@@ -68,4 +68,4 @@ class accessDB {
     }
 }
 
-export default accessDB;
+module.exports = { accessDB }
