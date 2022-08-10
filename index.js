@@ -7,10 +7,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
-// // Servir el directorio con el front buildeado
-app.use(express.static("build"));
-
-
 // -----------------  DBCONFIG --------------------- //
 
 import sqlLITE3 from './src/config.js'
@@ -67,17 +63,9 @@ app.delete('/productos/:id', async function (req, res) {
     })
 })
 
-
-// // Keep our client side routing functional.
-// // This code essentially serves the index.html file on any unknown routes.
-// // Otherwise we would need to rewrite our entire routing to work with this Express server setup.
-app.get("/*", (req, res) => {
-    res.sendFile(path.resolve('build', 'index.html'));
-});
-
 // -----------------  SERVER  --------------------- //
 
-const PORT = 8080 || process.env.port
+const PORT = 5000 || process.env.port
 const server = app.listen(PORT, () => {
     console.log(`Servidor http escuchando en el puerto ${server.address().port}`)
 })
